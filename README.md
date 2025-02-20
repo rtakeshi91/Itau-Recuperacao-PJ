@@ -1,11 +1,5 @@
-**# Itau-Recuperacao-PJ
-Case Itau - Recuperação PJ - ENGENHARIA TI SR
-
-Sumary:
-**
-Olá, seja muito bem-vinda!
-Nesta etapa, queremos conhecer um pouco melhor suas habilidades técnicas e como você gerencia situações de
-incertezas. Este exercício será dividido nos seguintes passos:
+**Itau-Recuperacao-PJ**
+**Case Itau - Recuperação PJ - ENGENHARIA TI SR**
 
 **PASSO 1 -Desenvolvimento da solução**
 Você deverá desenhar e desenvolver, em poucos dias, uma solução que atenda aos requisitos dados.
