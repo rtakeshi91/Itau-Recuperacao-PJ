@@ -1,6 +1,7 @@
 package com.itau.pj.recuperacao.domain.renegociacao.service;
 
-import com.itau.pj.recuperacao.adapters.outbound.entities.Divida;
+import com.itau.pj.recuperacao.entrypoints.entities.Divida;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
