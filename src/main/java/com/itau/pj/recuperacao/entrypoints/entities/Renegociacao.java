@@ -7,12 +7,14 @@ import jakarta.persistence.*;
 public class Renegociacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
 
     @OneToOne
     @JoinColumn(name = "simulacao_id", referencedColumnName = "id")
     private Simulacao simulacao;
 
+    @Column
     private String status;
 }
 

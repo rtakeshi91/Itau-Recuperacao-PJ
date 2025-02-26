@@ -32,19 +32,24 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+	// Lombok
 	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	//runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	// DevTools (opcional, apenas para desenvolvimento)
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// SpringDoc OpenAPI (substitui SpringFox)
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
+
+	// Banco de dados (H2 para testes ou MySQL/PostgreSQL conforme necessidade)
+	runtimeOnly 'com.h2database:h2'
+
+	// Testes
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
-
-	//PostgreSQL
-	implementation 'org.springframework.boot:spring-boot-starter'
-	implementation 'org.postgresql:postgresql:42.6.0' // Driver do PostgreSQL
-	implementation 'org.flywaydb:flyway-core' // Flyway para controle de migrations
 }
 
 dependencyManagement {

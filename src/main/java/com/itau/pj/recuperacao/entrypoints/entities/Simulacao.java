@@ -10,11 +10,13 @@ import java.util.List;
 public class Simulacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
 
     @OneToMany(mappedBy = "simulacao", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Divida> dividas = new ArrayList<>();
 
+    @Column
     private Double valorTotal;
 }
 

@@ -1,18 +1,13 @@
 spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
   datasource:
-    url: jdbc:postgresql://localhost:5432/recuperacao
-    username: admin
-    password: admin
-    driver-class-name: org.postgresql.Driver
-
+    url: jdbc:h2:file:~/h2-db
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
   jpa:
     hibernate:
-      ddl-auto: validate
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
-        show_sql: true
-
-  flyway:
-    enabled: true
+      ddl-auto: update
