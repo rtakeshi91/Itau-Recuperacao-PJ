@@ -1,6 +1,7 @@
 package com.itau.pj.recuperacao.adapters.web.impl;
 
 import com.itau.pj.recuperacao.adapters.web.RenegociacaoController;
+import com.itau.pj.recuperacao.domain.renegociacao.model.RenegociacaoUseCase;
 import com.itau.pj.recuperacao.entrypoints.entities.Divida;
 import com.itau.pj.recuperacao.entrypoints.entities.Renegociacao;
 import com.itau.pj.recuperacao.entrypoints.entities.Simulacao;
@@ -16,60 +17,26 @@ import java.util.List;
 @RestController
 public class RenegociacaoControllerImpl implements RenegociacaoController {
 
-    @Autowired
-    private DividaService dividaService;
+    private final RenegociacaoUseCase renegociacaoUseCase;
 
     @Autowired
-    private SimulacaoService simulacaoService;
-
-    @Autowired
-    private RenegociacaoService renegociacaoService;
-
-    @Override
-    public ResponseEntity<List<Divida>> listarDividas() {
-        List<Divida> dividas = dividaService.listarDividas();
-        return ResponseEntity.ok(dividas);
-    }
-
-    @Override
-    public ResponseEntity<Divida> obterDividaPorId(Long dividaId) {
-        Divida divida = dividaService.obterDividaPorId(dividaId);
-        return ResponseEntity.ok(divida);
-    }
-
-    @Override
-    public ResponseEntity<Simulacao> criarSimulacao(List<Long> dividaIds) {
-        Simulacao simulacao = simulacaoService.criarSimulacao(dividaIds);
-        return ResponseEntity.ok(simulacao);
-    }
-
-    @Override
-    public ResponseEntity<Simulacao> obterSimulacaoPorId(Long simulacaoId) {
-        Simulacao simulacao = simulacaoService.obterSimulacaoPorId(simulacaoId);
-        return ResponseEntity.ok(simulacao);
-    }
-
-    @Override
-    public ResponseEntity<Simulacao> confirmarSimulacao(Long simulacaoId) {
-        Simulacao simulacao = simulacaoService.confirmarSimulacao(simulacaoId);
-        return ResponseEntity.ok(simulacao);
+    public RenegociacaoControllerImpl(RenegociacaoUseCase renegociacaoUseCase) {
+        this.renegociacaoUseCase = renegociacaoUseCase;
     }
 
     @Override
     public ResponseEntity<Renegociacao> criarRenegociacao(Long simulacaoId) {
-        Renegociacao renegociacao = renegociacaoService.criarRenegociacao(simulacaoId);
-        return ResponseEntity.ok(renegociacao);
+        return ResponseEntity.ok(renegociacaoUseCase.criarRenegociacao(simulacaoId));
     }
 
     @Override
     public ResponseEntity<List<Renegociacao>> listarRenegociacoes() {
-        List<Renegociacao> renegociacoes = renegociacaoService.listarRenegociacoes();
-        return ResponseEntity.ok(renegociacoes);
+        return ResponseEntity.ok(renegociacaoUseCase.listarRenegociacoes());
     }
 
     @Override
     public ResponseEntity<Renegociacao> obterRenegociacaoPorId(Long renegociacaoId) {
-        Renegociacao renegociacao = renegociacaoService.obterRenegociacaoPorId(renegociacaoId);
-        return ResponseEntity.ok(renegociacao);
+        return ResponseEntity.ok(renegociacaoUseCase.obterRenegociacaoPorId(renegociacaoId));
     }
 }
+

@@ -16,5 +16,8 @@ public class Renegociacao {
 
     @Column
     private String status;
+
+    @Column
+    private Long clienteId;
 }
 

@@ -2,12 +2,13 @@ spring:
   h2:
     console:
       enabled: true
-      path: /h2
+      path: /h2-console
   datasource:
-    url: jdbc:h2:file:~/h2-db
+    url: jdbc:h2:file:C:/Users/takes/db-recuperacao-pj;AUTO_SERVER=TRUE  # Define o local do arquivo e permite conexões externas
     username: sa
     password:
     driver-class-name: org.h2.Driver
   jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: update  # Atualiza a estrutura do banco automaticamente

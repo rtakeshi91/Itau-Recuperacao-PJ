@@ -13,10 +13,15 @@ public class Simulacao {
     @Column
     private Long id;
 
-    @OneToMany(mappedBy = "simulacao", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ManyToMany(mappedBy = "simulacoes")  // Relacionamento bidirecional
     private List<Divida> dividas = new ArrayList<>();
+
+    @Column
+    private Long clienteId;
 
     @Column
     private Double valorTotal;
 }
+
+
 

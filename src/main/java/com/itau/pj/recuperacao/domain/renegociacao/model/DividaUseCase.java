@@ -1,12 +1,10 @@
-package com.itau.pj.recuperacao.domain.renegociacao.service;
+package com.itau.pj.recuperacao.domain.renegociacao.model;
 
 import com.itau.pj.recuperacao.entrypoints.entities.Divida;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface DividaService {
+public interface DividaUseCase {
     List<Divida> listarDividas();
     Divida obterDividaPorId(Long dividaId);
 }
-

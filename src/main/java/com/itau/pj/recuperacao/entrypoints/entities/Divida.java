@@ -2,7 +2,9 @@ package com.itau.pj.recuperacao.entrypoints.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "divida")
@@ -15,11 +17,17 @@ public class Divida {
     @Column
     private Double valor;
 
-    @ManyToOne
-    @JoinColumn(name = "simulacao_id") // Chave estrangeira para Simulacao
-    private Simulacao simulacao;
+    @ManyToMany
+    @JoinTable(
+            name = "divida_simulacao",
+            joinColumns = @JoinColumn(name = "divida_id"),
+            inverseJoinColumns = @JoinColumn(name = "simulacao_id")
+    )
+    private List<Simulacao> simulacoes = new ArrayList<>();  // Agora é uma lista de simulacoes
 
     @Column
-    Date dataVencimento;
-}
+    private Date dataVencimento;
 
+    @Column
+    private Long clienteId;
+}
