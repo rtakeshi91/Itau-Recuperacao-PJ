@@ -1,0 +1,32 @@
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (1, 500.00, '2025-03-01', 1);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (2, 1500.00, '2025-04-01', 1);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (3, 200.00, '2025-05-01', 1);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (4, 800.00, '2025-06-01', 1);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (5, 1000.00, '2025-07-01', 1);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (6, 300.00, '2025-08-01', 1);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (7, 700.00, '2025-09-01', 1);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (8, 2500.00, '2025-10-01', 1);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (9, 400.00, '2025-11-01', 1);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (10, 600.00, '2025-12-01', 1);
+
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (11, 550.00, '2025-03-01', 2);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (12, 1300.00, '2025-04-01', 2);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (13, 250.00, '2025-05-01', 2);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (14, 900.00, '2025-06-01', 2);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (15, 1100.00, '2025-07-01', 2);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (16, 350.00, '2025-08-01', 2);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (17, 750.00, '2025-09-01', 2);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (18, 2550.00, '2025-10-01', 2);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (19, 450.00, '2025-11-01', 2);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (20, 650.00, '2025-12-01', 2);
+
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (21, 600.00, '2025-03-01', 3);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (22, 1400.00, '2025-04-01', 3);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (23, 275.00, '2025-05-01', 3);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (24, 950.00, '2025-06-01', 3);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (25, 1200.00, '2025-07-01', 3);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (26, 400.00, '2025-08-01', 3);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (27, 800.00, '2025-09-01', 3);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (28, 2700.00, '2025-10-01', 3);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (29, 500.00, '2025-11-01', 3);
+INSERT INTO divida (id, valor, data_vencimento, cliente_id) VALUES (30, 700.00, '2025-12-01', 3);

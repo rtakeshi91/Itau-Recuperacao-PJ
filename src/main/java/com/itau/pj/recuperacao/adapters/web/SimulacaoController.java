@@ -1,7 +1,6 @@
 package com.itau.pj.recuperacao.adapters.web;
 
 import com.itau.pj.recuperacao.entrypoints.entities.Simulacao;
-import com.jayway.jsonpath.internal.path.ArraySliceOperation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -15,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/simulacao")
 public interface SimulacaoController {
 
-    @ArraySliceOperation.Operation(summary = "Criar simulação", description = "Cria uma simulação de renegociação para as dívidas informadas")
+    @Operation(summary = "Criar simulação", description = "Cria uma simulação de renegociação para as dívidas informadas")
     @ApiResponse(responseCode = "200", description = "Simulação criada com sucesso")
     @PostMapping
     ResponseEntity<Simulacao> criarSimulacao(

@@ -1,9 +1,13 @@
 package com.itau.pj.recuperacao.entrypoints.entities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "renegociacao")
+@Getter
+@Setter
 public class Renegociacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

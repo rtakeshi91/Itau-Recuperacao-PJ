@@ -1,12 +1,16 @@
 package com.itau.pj.recuperacao.entrypoints.entities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "simulacao")
+@Getter
+@Setter
 public class Simulacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
