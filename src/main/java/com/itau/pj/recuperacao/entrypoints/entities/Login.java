@@ -1,0 +1,26 @@
+package com.itau.pj.recuperacao.entrypoints.entities;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+
+@Entity
+@Table(name = "usuario")
+@Getter
+public class Login {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
+    private Long id;
+
+    @Column
+    private String login;
+
+    @Column
+    private String senha;
+
+    public Login(String login, String senha) {
+        this.login = login;
+        this.senha = senha;
+    }
+}

@@ -1,6 +1,6 @@
 package com.itau.pj.recuperacao.config.interceptor;
 
-import com.itau.pj.recuperacao.entrypoints.entities.Usuario;
+import com.itau.pj.recuperacao.entrypoints.entities.Login;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import jakarta.servlet.http.HttpServletRequest;
@@ -41,7 +41,7 @@ public class AuthInterceptor implements HandlerInterceptor {
                 // Armazenar em cache
                 Cache cache = cacheManager.getCache("jwtCache");
                 if (cache != null) {
-                    cache.put(token, new Usuario(login, senha));
+                    cache.put(token, new Login(login, senha));
                 }
 
                 return true; // Continua a requisição
