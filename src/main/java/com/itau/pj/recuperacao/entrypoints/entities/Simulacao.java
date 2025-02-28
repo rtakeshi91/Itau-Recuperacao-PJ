@@ -25,6 +25,9 @@ public class Simulacao {
 
     @Column
     private Double valorTotal;
+
+    @Column
+    private String status;
 }
 
 
