@@ -38,12 +38,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 	implementation 'org.springframework.boot:spring-boot-starter-quartz'
 
-	// SpringDoc OpenAPI (substitui SpringFox)
+	// SpringDoc OpenAPI
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
 
 	// Banco de dados
-	runtimeOnly 'mysql:mysql-connector-java:8.0.33'
-	runtimeOnly 'com.h2database:h2' //para testes
+	implementation 'com.h2database:h2:2.1.214'
+	//runtimeOnly 'com.h2database:h2' // Para testes
 
 	// Lombok
 	compileOnly 'org.projectlombok:lombok'
@@ -57,6 +57,17 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	testImplementation 'org.springframework.amqp:spring-rabbit-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// JWT
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+	// Jakarta-Servlet (versão correta para Spring Boot 3)
+	implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+
+	// Cache
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
 }
 
 dependencyManagement {
