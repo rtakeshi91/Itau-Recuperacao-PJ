@@ -1,5 +1,7 @@
 package com.itau.pj.recuperacao.adapters.web;
 
+import com.itau.pj.recuperacao.domain.renegociacao.dto.input.SimulacaoInputDTO;
+import com.itau.pj.recuperacao.domain.renegociacao.dto.output.SimulacaoOutputDTO;
 import com.itau.pj.recuperacao.entrypoints.entities.Simulacao;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -17,15 +19,13 @@ public interface SimulacaoController {
     @Operation(summary = "Criar simulação", description = "Cria uma simulação de renegociação para as dívidas informadas")
     @ApiResponse(responseCode = "200", description = "Simulação criada com sucesso")
     @PostMapping
-    ResponseEntity<Simulacao> criarSimulacao(
-            @Parameter(description = "IDs das dívidas", required = true)
-            @RequestBody List<Long> dividaIds);
+    ResponseEntity<SimulacaoOutputDTO> criarSimulacao(@RequestBody SimulacaoInputDTO simulacaoInputDTO);
 
     @Operation(summary = "Obter simulação por ID", description = "Retorna uma simulação específica pelo seu ID")
     @ApiResponse(responseCode = "200", description = "Simulação encontrada")
     @ApiResponse(responseCode = "404", description = "Simulação não encontrada")
     @GetMapping("/{simulacao-id}")
-    ResponseEntity<Simulacao> obterSimulacaoPorId(
+    ResponseEntity<SimulacaoOutputDTO> obterSimulacaoPorId(
             @Parameter(description = "ID da simulação", required = true)
             @PathVariable("simulacao-id") Long simulacaoId);
 
@@ -33,7 +33,7 @@ public interface SimulacaoController {
     @ApiResponse(responseCode = "200", description = "Simulação confirmada com sucesso")
     @ApiResponse(responseCode = "404", description = "Simulação não encontrada")
     @PostMapping("/{simulacao-id}")
-    ResponseEntity<Simulacao> confirmarSimulacao(
+    ResponseEntity<SimulacaoOutputDTO> confirmarSimulacao(
             @Parameter(description = "ID da simulação", required = true)
             @PathVariable("simulacao-id") Long simulacaoId);
 }

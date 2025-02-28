@@ -1,6 +1,8 @@
 package com.itau.pj.recuperacao.adapters.web.impl;
 
 import com.itau.pj.recuperacao.adapters.web.RenegociacaoController;
+import com.itau.pj.recuperacao.domain.renegociacao.dto.input.RenegociacaoInputDTO;
+import com.itau.pj.recuperacao.domain.renegociacao.dto.output.RenegociacaoOutputDTO;
 import com.itau.pj.recuperacao.domain.renegociacao.model.RenegociacaoUseCase;
 import com.itau.pj.recuperacao.entrypoints.entities.Divida;
 import com.itau.pj.recuperacao.entrypoints.entities.Renegociacao;
@@ -13,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 public class RenegociacaoControllerImpl implements RenegociacaoController {
@@ -25,18 +28,34 @@ public class RenegociacaoControllerImpl implements RenegociacaoController {
     }
 
     @Override
-    public ResponseEntity<Renegociacao> criarRenegociacao(Long simulacaoId) {
-        return ResponseEntity.ok(renegociacaoUseCase.criarRenegociacao(simulacaoId));
+    public ResponseEntity<RenegociacaoOutputDTO> criarRenegociacao(RenegociacaoInputDTO renegociacaoInputDTO) {
+        Renegociacao renegociacao = renegociacaoUseCase.criarRenegociacao(renegociacaoInputDTO.getSimulacaoId());
+        RenegociacaoOutputDTO renegociacaoOutputDTO = mapRenegociacaoToOutputDTO(renegociacao);
+        return ResponseEntity.ok(renegociacaoOutputDTO);
     }
 
     @Override
-    public ResponseEntity<List<Renegociacao>> listarRenegociacoes() {
-        return ResponseEntity.ok(renegociacaoUseCase.listarRenegociacoes());
+    public ResponseEntity<List<RenegociacaoOutputDTO>> listarRenegociacoes() {
+        List<Renegociacao> renegociacoes = renegociacaoUseCase.listarRenegociacoes();
+        List<RenegociacaoOutputDTO> renegociacaoOutputDTOs = renegociacoes.stream()
+                .map(this::mapRenegociacaoToOutputDTO)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(renegociacaoOutputDTOs);
     }
 
     @Override
-    public ResponseEntity<Renegociacao> obterRenegociacaoPorId(Long renegociacaoId) {
-        return ResponseEntity.ok(renegociacaoUseCase.obterRenegociacaoPorId(renegociacaoId));
+    public ResponseEntity<RenegociacaoOutputDTO> obterRenegociacaoPorId(Long renegociacaoId) {
+        Renegociacao renegociacao = renegociacaoUseCase.obterRenegociacaoPorId(renegociacaoId);
+        RenegociacaoOutputDTO renegociacaoOutputDTO = mapRenegociacaoToOutputDTO(renegociacao);
+        return ResponseEntity.ok(renegociacaoOutputDTO);
+    }
+
+    private RenegociacaoOutputDTO mapRenegociacaoToOutputDTO(Renegociacao renegociacao) {
+        // Implemente a lógica de mapeamento aqui
+        RenegociacaoOutputDTO dto = new RenegociacaoOutputDTO();
+        dto.setId(renegociacao.getId());
+        // Mapear outros campos
+        return dto;
     }
 }
 

@@ -1,5 +1,7 @@
 package com.itau.pj.recuperacao.adapters.web;
 
+import com.itau.pj.recuperacao.domain.renegociacao.dto.input.RenegociacaoInputDTO;
+import com.itau.pj.recuperacao.domain.renegociacao.dto.output.RenegociacaoOutputDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -21,20 +23,18 @@ public interface RenegociacaoController {
     @ApiResponse(responseCode = "200", description = "Renegociação criada com sucesso")
     @ApiResponse(responseCode = "404", description = "Simulação não encontrada")
     @PostMapping
-    ResponseEntity<Renegociacao> criarRenegociacao(
-            @Parameter(description = "ID da simulação confirmada", required = true)
-            @RequestBody Long simulacaoId);
+    ResponseEntity<RenegociacaoOutputDTO> criarRenegociacao(@RequestBody RenegociacaoInputDTO renegociacaoInputDTO);
 
     @Operation(summary = "Listar renegociações", description = "Retorna uma lista de todas as renegociações")
     @ApiResponse(responseCode = "200", description = "Renegociações listadas com sucesso")
     @GetMapping
-    ResponseEntity<List<Renegociacao>> listarRenegociacoes();
+    ResponseEntity<List<RenegociacaoOutputDTO>> listarRenegociacoes();
 
     @Operation(summary = "Obter renegociação por ID", description = "Retorna uma renegociação específica pelo seu ID")
     @ApiResponse(responseCode = "200", description = "Renegociação encontrada")
     @ApiResponse(responseCode = "404", description = "Renegociação não encontrada")
     @GetMapping("/{renegociacao-id}")
-    ResponseEntity<Renegociacao> obterRenegociacaoPorId(
+    ResponseEntity<RenegociacaoOutputDTO> obterRenegociacaoPorId(
             @Parameter(description = "ID da renegociação", required = true)
             @PathVariable("renegociacao-id") Long renegociacaoId);
 }

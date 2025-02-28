@@ -1,5 +1,6 @@
 package com.itau.pj.recuperacao.entrypoints.entities;
 
+import com.itau.pj.recuperacao.domain.renegociacao.enums.RenegociacaoStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +20,7 @@ public class Renegociacao {
     private Simulacao simulacao;
 
     @Column
-    private String status;
+    private RenegociacaoStatus status;
 
     @Column
     private Long clienteId;

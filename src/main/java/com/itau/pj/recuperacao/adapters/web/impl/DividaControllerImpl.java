@@ -1,14 +1,15 @@
 package com.itau.pj.recuperacao.adapters.web.impl;
 
 import com.itau.pj.recuperacao.adapters.web.DividaController;
+import com.itau.pj.recuperacao.domain.renegociacao.dto.output.DividaOutputDTO;
 import com.itau.pj.recuperacao.domain.renegociacao.model.DividaUseCase;
-import com.itau.pj.recuperacao.domain.renegociacao.service.DividaService;
 import com.itau.pj.recuperacao.entrypoints.entities.Divida;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 public class DividaControllerImpl implements DividaController {
@@ -21,13 +22,27 @@ public class DividaControllerImpl implements DividaController {
     }
 
     @Override
-    public ResponseEntity<List<Divida>> listarDividas() {
-        return ResponseEntity.ok(dividaUseCase.listarDividas());
+    public ResponseEntity<List<DividaOutputDTO>> listarDividas() {
+        List<Divida> dividas = dividaUseCase.listarDividas();
+        List<DividaOutputDTO> dividaOutputDTOs = dividas.stream()
+                .map(this::mapDividaToOutputDTO)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(dividaOutputDTOs);
     }
 
     @Override
-    public ResponseEntity<Divida> obterDividaPorId(Long dividaId) {
-        return ResponseEntity.ok(dividaUseCase.obterDividaPorId(dividaId));
+    public ResponseEntity<DividaOutputDTO> obterDividaPorId(Long dividaId) {
+        Divida divida = dividaUseCase.obterDividaPorId(dividaId);
+        DividaOutputDTO dividaOutputDTO = mapDividaToOutputDTO(divida);
+        return ResponseEntity.ok(dividaOutputDTO);
+    }
+
+    private DividaOutputDTO mapDividaToOutputDTO(Divida divida) {
+        // Implemente a lógica de mapeamento aqui
+        DividaOutputDTO dto = new DividaOutputDTO();
+        dto.setId(divida.getId());
+        // Mapear outros campos
+        return dto;
     }
 }
 
