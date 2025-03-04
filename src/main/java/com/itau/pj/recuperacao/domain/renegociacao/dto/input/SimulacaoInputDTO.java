@@ -10,4 +10,6 @@ import java.util.List;
 public class SimulacaoInputDTO {
     private List<Long> dividaIds;
 
+    public <T> SimulacaoInputDTO(List<T> list) {
+    }
 }
