@@ -24,3 +24,4 @@ public interface LoginController {
     ResponseEntity<String> autenticar(@RequestBody LoginRequestDTO loginRequest);
 }
 
+

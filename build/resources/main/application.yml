@@ -20,4 +20,8 @@ spring:
     cache-names: jwtCache
 
 jwt:
-  secret: suaSecretSuperSegura
+  secret: c2VjcmV0a2V5c2VjdXJlZG5vdGV4ZW5jb2RlcnZhbHVlMzJkZGVkZmFjZGll
+
+logging:
+  level:
+    org.springframework.security: DEBUG

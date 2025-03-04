@@ -23,8 +23,8 @@ public class LoginUseCaseImpl implements LoginUseCase {
         Login usuario = loginRepository.findByLogin(loginRequest.getLogin())
                 .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado"));
 
-        if (!BCrypt.checkpw(loginRequest.getSenha(), usuario.getSenha())) {
-            throw new BadCredentialsException("Credenciais inválidas");
+        if (!loginRequest.getSenha().equals(usuario.getSenha())) {
+            throw new BadCredentialsException("Senha inválida");
         }
 
         return tokenProvider.gerarToken(usuario.getLogin());

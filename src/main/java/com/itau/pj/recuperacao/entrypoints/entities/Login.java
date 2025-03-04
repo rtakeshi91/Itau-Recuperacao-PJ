@@ -1,11 +1,15 @@
 package com.itau.pj.recuperacao.entrypoints.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "usuario")
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Login {
 
     @Id
@@ -22,5 +26,9 @@ public class Login {
     public Login(String login, String senha) {
         this.login = login;
         this.senha = senha;
+    }
+
+    public Login(String usuario) {
+        this.login = usuario;
     }
 }

@@ -2,6 +2,8 @@ package com.itau.pj.recuperacao.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.security.SecurityScheme;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,6 +16,12 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("API de Renegociação de Dívidas")
                         .version("1.0")
-                        .description("API para gerenciar renegociações de dívidas"));
+                        .description("API para gerenciar renegociações de dívidas"))
+                .components(new io.swagger.v3.oas.models.Components()
+                        .addSecuritySchemes("bearerAuth", new SecurityScheme()
+                                .type(SecurityScheme.Type.HTTP)
+                                .scheme("bearer")
+                                .bearerFormat("JWT")))
+                .addSecurityItem(new SecurityRequirement().addList("bearerAuth"));
     }
 }
