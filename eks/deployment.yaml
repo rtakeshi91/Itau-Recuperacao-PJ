@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recuperacao-deploy
+  labels:
+    app: recuperacao
+spec:
+  replicas: 3  # Número de réplicas da aplicação
+  selector:
+    matchLabels:
+      app: recuperacao
+  template:
+    metadata:
+      labels:
+        app: recuperacao
+    spec:
+      containers:
+        - name: recuperacao
+          image: <AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/recuperacao:latest
+          ports:
+            - containerPort: 8080

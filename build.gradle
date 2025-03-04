@@ -68,6 +68,13 @@ dependencies {
 
 	// Cache
 	implementation 'org.springframework.boot:spring-boot-starter-cache'
+
+	//Micrometer e Prometheus
+	implementation 'io.micrometer:micrometer-registry-prometheus'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	//OpenTelemetry
+	implementation 'io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter:2.0.0-alpha'
 }
 
 dependencyManagement {

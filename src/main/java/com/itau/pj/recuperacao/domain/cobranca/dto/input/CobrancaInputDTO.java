@@ -8,4 +8,7 @@ import lombok.Setter;
 public class CobrancaInputDTO {
     private String email;
     private String mensagem;
+
+    public CobrancaInputDTO(String mail, String teste) {
+    }
 }

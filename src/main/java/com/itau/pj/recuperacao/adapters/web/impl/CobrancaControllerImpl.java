@@ -49,6 +49,3 @@ public class CobrancaControllerImpl implements CobrancaController {
         return dto;
     }
 }
-
-// Implementações das outras controllers seguem o mesmo padrão, utilizando os DTOs correspondentes e métodos de mapeamento.
-
