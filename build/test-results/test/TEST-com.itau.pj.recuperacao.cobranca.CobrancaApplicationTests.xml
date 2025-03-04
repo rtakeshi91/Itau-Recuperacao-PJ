@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.itau.pj.recuperacao.cobranca.CobrancaApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-04T15:06:57" hostname="DESKTOP-F9P5O7T" time="0.412">
+<testsuite name="com.itau.pj.recuperacao.cobranca.CobrancaApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-04T15:08:17" hostname="DESKTOP-F9P5O7T" time="0.366">
   <properties/>
-  <testcase name="contextLoads()" classname="com.itau.pj.recuperacao.cobranca.CobrancaApplicationTests" time="0.412"/>
-  <system-out><![CDATA[12:06:49.765 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.itau.pj.recuperacao.cobranca.CobrancaApplicationTests]: CobrancaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-12:06:49.918 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.itau.pj.recuperacao.Application for test class com.itau.pj.recuperacao.cobranca.CobrancaApplicationTests
+  <testcase name="contextLoads()" classname="com.itau.pj.recuperacao.cobranca.CobrancaApplicationTests" time="0.366"/>
+  <system-out><![CDATA[12:08:07.804 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.itau.pj.recuperacao.cobranca.CobrancaApplicationTests]: CobrancaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:08:07.925 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.itau.pj.recuperacao.Application for test class com.itau.pj.recuperacao.cobranca.CobrancaApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,20 +14,20 @@
 
  :: Spring Boot ::                (v3.4.3)
 
-2025-03-04T12:06:50.706-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] c.i.p.r.c.CobrancaApplicationTests       : Starting CobrancaApplicationTests using Java 21.0.5 with PID 14508 (started by takes in C:\Users\takes\IdeaProjects\Itau-Recuperacao-PJ)
-2025-03-04T12:06:50.707-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] c.i.p.r.c.CobrancaApplicationTests       : The following 1 profile is active: "test"
-2025-03-04T12:06:51.507-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-03-04T12:06:51.578-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 6 JPA repository interfaces.
-2025-03-04T12:06:52.260-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=105fcb4e-18a3-3f32-ba3c-bc86bd819daa
-2025-03-04T12:06:52.680-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-03-04T12:06:53.041-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:C:/Users/takes/db-recuperacao-pj user=SA
-2025-03-04T12:06:53.043-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-03-04T12:06:53.221-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-03-04T12:06:53.303-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-03-04T12:06:53.354-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-03-04T12:06:53.696-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-03-04T12:06:53.772-03:00  WARN 14508 --- [itau-pj-recuperacao] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-03-04T12:06:53.790-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-03-04T12:08:08.535-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] c.i.p.r.c.CobrancaApplicationTests       : Starting CobrancaApplicationTests using Java 21.0.5 with PID 16436 (started by takes in C:\Users\takes\IdeaProjects\Itau-Recuperacao-PJ)
+2025-03-04T12:08:08.537-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] c.i.p.r.c.CobrancaApplicationTests       : The following 1 profile is active: "test"
+2025-03-04T12:08:09.182-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-04T12:08:09.231-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 6 JPA repository interfaces.
+2025-03-04T12:08:09.723-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=105fcb4e-18a3-3f32-ba3c-bc86bd819daa
+2025-03-04T12:08:10.009-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-04T12:08:14.331-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:file:C:/Users/takes/db-recuperacao-pj user=SA
+2025-03-04T12:08:14.333-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-04T12:08:14.440-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-04T12:08:14.508-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-04T12:08:14.545-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-04T12:08:14.814-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-04T12:08:14.862-03:00  WARN 16436 --- [itau-pj-recuperacao] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-04T12:08:14.873-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.1.214
@@ -35,23 +35,23 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-03-04T12:06:54.992-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-03-04T12:06:55.048-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-03-04T12:06:55.802-03:00  WARN 14508 --- [itau-pj-recuperacao] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-03-04T12:06:55.838-03:00  WARN 14508 --- [itau-pj-recuperacao] [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2025-03-04T12:08:15.722-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-04T12:08:15.770-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-04T12:08:16.335-03:00  WARN 16436 --- [itau-pj-recuperacao] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-04T12:08:16.361-03:00  WARN 16436 --- [itau-pj-recuperacao] [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: a8e497b9-3eae-4cac-8efb-3278ec77b921
+Using generated security password: 42a30d33-4c97-44a7-abd1-e15e7fac1904
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-03-04T12:06:55.872-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-03-04T12:06:56.413-03:00 DEBUG 14508 --- [itau-pj-recuperacao] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-03-04T12:06:57.084-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:C:/Users/takes/db-recuperacao-pj'
-2025-03-04T12:06:57.145-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2025-03-04T12:06:57.162-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2025-03-04T12:06:57.162-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
-2025-03-04T12:06:57.163-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2025-03-04T12:06:57.165-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2025-03-04T12:08:16.386-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-03-04T12:08:16.734-03:00 DEBUG 16436 --- [itau-pj-recuperacao] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-04T12:08:17.249-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:C:/Users/takes/db-recuperacao-pj'
+2025-03-04T12:08:17.310-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2025-03-04T12:08:17.323-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2025-03-04T12:08:17.323-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2025-03-04T12:08:17.324-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2025-03-04T12:08:17.325-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -59,12 +59,12 @@ This generated password is for development use only. Your security configuration
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2025-03-04T12:06:57.165-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2025-03-04T12:06:57.165-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
-2025-03-04T12:06:57.165-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@39a809db
-2025-03-04T12:06:57.288-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2025-03-04T12:06:57.289-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2025-03-04T12:06:57.311-03:00  INFO 14508 --- [itau-pj-recuperacao] [    Test worker] c.i.p.r.c.CobrancaApplicationTests       : Started CobrancaApplicationTests in 7.083 seconds (process running for 8.504)
+2025-03-04T12:08:17.325-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2025-03-04T12:08:17.325-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2025-03-04T12:08:17.326-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@625ae6d
+2025-03-04T12:08:17.408-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2025-03-04T12:08:17.408-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2025-03-04T12:08:17.432-03:00  INFO 16436 --- [itau-pj-recuperacao] [    Test worker] c.i.p.r.c.CobrancaApplicationTests       : Started CobrancaApplicationTests in 9.249 seconds (process running for 10.449)
 ]]></system-out>
   <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
 WARNING: A Java agent has been loaded dynamically (C:\Users\takes\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.15.11\a38b16385e867f59a641330f0362ebe742788ed8\byte-buddy-agent-1.15.11.jar)
