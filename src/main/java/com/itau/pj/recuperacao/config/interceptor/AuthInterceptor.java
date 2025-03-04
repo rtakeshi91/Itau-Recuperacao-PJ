@@ -38,7 +38,7 @@ public class AuthInterceptor implements HandlerInterceptor {
                     Login cachedLogin = cache.get(token, Login.class);
                     if (cachedLogin != null) {
                         System.out.println("Token recuperado do cache para usuário: " + cachedLogin.getLogin());
-                        return true; // Continua a requisição sem precisar reprocessar o token
+                        return true;
                     }
                 }
 
