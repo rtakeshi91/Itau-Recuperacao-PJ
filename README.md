@@ -59,6 +59,7 @@ efetivação acordo, entre outros);
 
 
 **SOLUÇÃO**
+
 **Resumo:** Realizei o desenvolvimento em padrão hexagonal, construindo as controladoras para interagir com o Front-End assim como deixei a aplicação pronta para execução de rotinas cron como envio de Cobrança. Todo o código fonte está sem regra de negócio, somente a navegação dentre as camadas da aplicação, as regras de negócio podem ser acrescentadas posteriormente e as tecnologias envolvidas também podem ser substituídas. O código-fonte foi construído com auxílio de IA para reduzir o tempo de desenvolvimento e para solucionar alguns problemas com dependências. A aplicação também está pré-configurada para ser hospedada em cluster EKS.Construí a aplicação com a premissa de que as entidades necessárias para a aplicação estariam sendo replicadas via RTL da base legado para a base da aplicação ou que a base legado seria completamente migrada para a nova base de dados.
 
 **Testes:** Não pude implementar testes de forma mais abrangente, mas já temos os testes unitários de todas as adapters existentes no projeto, em questão de continuidade e futuro da aplicação/produto, seguiria a seguinte estratégia:
