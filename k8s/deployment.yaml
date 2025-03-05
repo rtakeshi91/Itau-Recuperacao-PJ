@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: itau-pj-recuperacao
+  labels:
+    app: itau-pj-recuperacao
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: itau-pj-recuperacao
+  template:
+    metadata:
+      labels:
+        app: itau-pj-recuperacao
+    spec:
+      containers:
+        - name: itau-pj-recuperacao
+          image: <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/itau-pj-recuperacao:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_APPLICATION_NAME
+              value: "itau-pj-recuperacao"
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:h2:file:/app/db-recuperacao-pj;AUTO_SERVER=TRUE;CACHE_SIZE=1024"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "sa"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: ""
+            - name: SPRING_JPA_DATABASE_PLATFORM
+              value: "org.hibernate.dialect.H2Dialect"
+            - name: JWT_SECRET
+              value: "c2VjcmV0a2V5c2VjdXJlZG5vdGV4ZW5jb2RlcnZhbHVlMzJkZGVkZmFjZGll"
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
