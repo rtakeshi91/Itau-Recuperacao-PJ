@@ -56,3 +56,40 @@ IV. Demais itens que você julgar relevante (framework ou técnicas de teste, me
 • Funcionalidades de renegociação (agrupamento da dívida e simulação de pagamento, oferta de produtos,
 efetivação acordo, entre outros);
 • Funcionalidades de pagamento (emissão e pagamento de boletos, débito em conta, entre outros).
+
+
+**SOLUÇÃO**
+**Resumo:** Realizei o desenvolvimento em padrão hexagonal, construindo as controladoras para interagir com o Front-End assim como deixei a aplicação pronta para execução de rotinas cron como envio de Cobrança. Todo o código fonte está sem regra de negócio, somente a navegação dentre as camadas da aplicação, as regras de negócio podem ser acrescentadas posteriormente e as tecnologias envolvidas também podem ser substituídas. O código-fonte foi construído com auxílio de IA para reduzir o tempo de desenvolvimento e para solucionar alguns problemas com dependências. A aplicação também está pré-configurada para ser hospedada em cluster EKS.Construí a aplicação com a premissa de que as entidades necessárias para a aplicação estariam sendo replicadas via RTL da base legado para a base da aplicação ou que a base legado seria completamente migrada para a nova base de dados.
+
+**Testes:** Não pude implementar testes de forma mais abrangente, mas já temos os testes unitários de todas as adapters existentes no projeto, em questão de continuidade e futuro da aplicação/produto, seguiria a seguinte estratégia:
+Amadurecendo os requisitos técnicos da aplicação, construiria os testes de integração;
+Conhecendo mais profundamente as regras de negócio, construiria os testes de aceitação;
+Com a aplicação já em ambiente de testes, iniciaria a construção dos teste de comportamento, performance e mocking para já começar a prever problemas em ambiente Produtivo;
+Após a aplicação estar em ambiente produtivo, mapear todas as eventuais exceções e ocorrências e construir testes específicos para os cenários encontrados;
+
+**Autenticação:** Também desenvolvi uma controladora não-autenticada com um método para gerar um token JWT mediante login/senha informado no frontEnd. O Token ao ser recuperado pelo cliente deve ser fornecido no header dos outros métodos das outras controladoras.
+
+**Padrões de desenvolvimento aplicados na solução:**
+Adapter Pattern;
+Facade Pattern;
+Service Layer Pattern;
+Dependency Injection Pattern;
+Use Case Pattern;
+Command Pattern;
+Data Transfer Object (DTO);
+Repository Pattern;
+Entity Pattern;
+
+**Tecnologias utilizadas no desenvolvimento:**
+Java 21;
+Gradle 7.6;
+H2 Database;
+Springboot 3.x;
+Swagger;
+JUnit e Mockito;
+JWT;
+SLF4J e Logback;
+Micrometer + Prometheus;
+Spring Cloud Sleuth + OpenTelemetry;
+Grafana/Kibana;
+Amazon EKS/ECR/SQS (todos pré-configurados, não criei clusters nem filas para realizar a parametrização na aplicação);
