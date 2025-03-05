@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class Cobranca {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,4 +20,11 @@ public class Cobranca {
     private String email;
     private String mensagem;
     private LocalDateTime dataEnvio;
+
+    // Construtores
+    public Cobranca(Long id, String email, String mensagem) {
+        this.id = id;
+        this.email = email;
+        this.mensagem = mensagem;
+    }
 }

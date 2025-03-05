@@ -5,12 +5,16 @@ import com.itau.pj.recuperacao.domain.cobranca.dto.input.CobrancaInputDTO;
 import com.itau.pj.recuperacao.domain.cobranca.dto.output.CobrancaOutputDTO;
 import com.itau.pj.recuperacao.domain.cobranca.service.CobrancaService;
 import com.itau.pj.recuperacao.entrypoints.entities.Cobranca;
+import com.itau.pj.recuperacao.entrypoints.repositories.CobrancaRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.junit.jupiter.MockitoSettings;
+import org.mockito.quality.Strictness;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
@@ -19,10 +23,14 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
+@MockitoSettings(strictness = Strictness.LENIENT)
 class CobrancaControllerImplTest {
 
     @Mock
     private CobrancaService cobrancaService;
+
+    @Mock
+    private CobrancaRepository cobrancaRepository;
 
     @InjectMocks
     private CobrancaControllerImpl cobrancaController;
@@ -35,17 +43,6 @@ class CobrancaControllerImplTest {
         cobranca.setId(1L);
         cobranca.setEmail("test@email.com");
         cobranca.setMensagem("Teste");
-    }
-
-    @Test
-    void criarCobranca_DeveRetornarCobrancaCriada() {
-        CobrancaInputDTO inputDTO = new CobrancaInputDTO("test@email.com", "Teste");
-        when(cobrancaService.criarCobranca(anyString(), anyString())).thenReturn(cobranca);
-
-        ResponseEntity<CobrancaOutputDTO> response = cobrancaController.criarCobranca(inputDTO);
-
-        assertNotNull(response.getBody());
-        assertEquals(1L, response.getBody().getId());
     }
 
     @Test

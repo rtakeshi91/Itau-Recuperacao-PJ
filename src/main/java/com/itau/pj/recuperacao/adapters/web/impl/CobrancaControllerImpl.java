@@ -18,10 +18,15 @@ public class CobrancaControllerImpl implements CobrancaController {
     private final CobrancaService cobrancaService;
 
     @Override
-    public ResponseEntity<CobrancaOutputDTO> criarCobranca(CobrancaInputDTO cobrancaInputDTO) {
-        Cobranca cobranca = cobrancaService.criarCobranca(cobrancaInputDTO.getEmail(), cobrancaInputDTO.getMensagem());
-        CobrancaOutputDTO cobrancaOutputDTO = mapCobrancaToOutputDTO(cobranca); // Método para mapear
-        return ResponseEntity.ok(cobrancaOutputDTO);
+    public ResponseEntity<CobrancaOutputDTO> criarCobranca(CobrancaInputDTO inputDTO) {
+        Cobranca cobranca = cobrancaService.criarCobranca(inputDTO.getEmail(), inputDTO.getMensagem());
+
+        if (cobranca == null) {
+            throw new IllegalArgumentException("Cobranca não pode ser nula");
+        }
+
+        CobrancaOutputDTO outputDTO = mapCobrancaToOutputDTO(cobranca);
+        return ResponseEntity.ok(outputDTO);
     }
 
     @Override
@@ -39,13 +44,11 @@ public class CobrancaControllerImpl implements CobrancaController {
         return ResponseEntity.ok().build();
     }
 
-    private CobrancaOutputDTO mapCobrancaToOutputDTO(Cobranca cobranca) {
-        // Implemente a lógica de mapeamento aqui
-        CobrancaOutputDTO dto = new CobrancaOutputDTO();
-        dto.setId(cobranca.getId());
-        dto.setEmail(cobranca.getEmail());
-        dto.setMensagem(cobranca.getMensagem());
-        // Mapear outros campos
-        return dto;
+    public CobrancaOutputDTO mapCobrancaToOutputDTO(Cobranca cobranca) {
+        if (cobranca == null) {
+            throw new IllegalArgumentException("Cobranca não pode ser nula");
+        }
+        return new CobrancaOutputDTO(cobranca.getId(), cobranca.getEmail(), cobranca.getMensagem());
     }
+
 }

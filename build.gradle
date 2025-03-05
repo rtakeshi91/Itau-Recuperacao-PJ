@@ -38,12 +38,15 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 	implementation 'org.springframework.boot:spring-boot-starter-quartz'
 
+	// AWS SDK para SQS e Core
+	implementation 'software.amazon.awssdk:sqs:2.20.60'
+	implementation 'software.amazon.awssdk:core:2.20.60'  // Se necessário
+
 	// SpringDoc OpenAPI
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
 
 	// Banco de dados
 	implementation 'com.h2database:h2:2.1.214'
-	//runtimeOnly 'com.h2database:h2' // Para testes
 
 	// Lombok
 	compileOnly 'org.projectlombok:lombok'
@@ -69,11 +72,11 @@ dependencies {
 	// Cache
 	implementation 'org.springframework.boot:spring-boot-starter-cache'
 
-	//Micrometer e Prometheus
+	// Micrometer e Prometheus
 	implementation 'io.micrometer:micrometer-registry-prometheus'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
-	//OpenTelemetry
+	// OpenTelemetry
 	implementation 'io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter:2.0.0-alpha'
 }
 
