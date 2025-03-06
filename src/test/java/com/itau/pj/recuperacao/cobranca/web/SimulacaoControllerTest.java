@@ -1,11 +1,11 @@
 package com.itau.pj.recuperacao.cobranca.web;
 
 
-import com.itau.pj.recuperacao.adapters.web.impl.SimulacaoControllerImpl;
-import com.itau.pj.recuperacao.domain.renegociacao.dto.input.SimulacaoInputDTO;
-import com.itau.pj.recuperacao.domain.renegociacao.dto.output.SimulacaoOutputDTO;
-import com.itau.pj.recuperacao.domain.renegociacao.model.SimulacaoUseCase;
-import com.itau.pj.recuperacao.entrypoints.entities.Simulacao;
+import com.itau.pj.recuperacao.application.ports.in.SimulacaoUseCase;
+import com.itau.pj.recuperacao.domain.model.Simulacao;
+import com.itau.pj.recuperacao.infraestrutura.controllers.impl.SimulacaoControllerImpl;
+import com.itau.pj.recuperacao.infraestrutura.dto.in.SimulacaoInputDTO;
+import com.itau.pj.recuperacao.infraestrutura.dto.out.SimulacaoOutputDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -14,7 +14,6 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;

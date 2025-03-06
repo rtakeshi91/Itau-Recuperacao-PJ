@@ -1,8 +1,8 @@
 package com.itau.pj.recuperacao.cobranca.adapters.scheduler;
 
-import com.itau.pj.recuperacao.adapters.scheduler.CobrancaScheduler;
-import com.itau.pj.recuperacao.domain.cobranca.service.CobrancaService;
-import com.itau.pj.recuperacao.entrypoints.entities.Cobranca;
+import com.itau.pj.recuperacao.domain.model.Cobranca;
+import com.itau.pj.recuperacao.infraestrutura.adapters.scheduler.CobrancaScheduler;
+import com.itau.pj.recuperacao.infraestrutura.services.CobrancaService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

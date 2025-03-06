@@ -1,9 +1,9 @@
 package com.itau.pj.recuperacao.cobranca.web;
 
-import com.itau.pj.recuperacao.adapters.web.impl.DividaControllerImpl;
-import com.itau.pj.recuperacao.domain.renegociacao.dto.output.DividaOutputDTO;
-import com.itau.pj.recuperacao.domain.renegociacao.model.DividaUseCase;
-import com.itau.pj.recuperacao.entrypoints.entities.Divida;
+import com.itau.pj.recuperacao.infraestrutura.controllers.impl.DividaControllerImpl;
+import com.itau.pj.recuperacao.infraestrutura.dto.out.DividaOutputDTO;
+import com.itau.pj.recuperacao.application.ports.in.DividaUseCase;
+import com.itau.pj.recuperacao.domain.model.Divida;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

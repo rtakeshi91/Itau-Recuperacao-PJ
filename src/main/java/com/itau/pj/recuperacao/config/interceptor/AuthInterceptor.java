@@ -1,7 +1,7 @@
 package com.itau.pj.recuperacao.config.interceptor;
 
-import com.itau.pj.recuperacao.config.TokenProvider;
-import com.itau.pj.recuperacao.entrypoints.entities.Login;
+import com.itau.pj.recuperacao.config.auth.TokenProvider;
+import com.itau.pj.recuperacao.domain.model.Login;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.springframework.cache.Cache;
@@ -37,7 +37,7 @@ public class AuthInterceptor implements HandlerInterceptor {
                 if (cache != null) {
                     Login cachedLogin = cache.get(token, Login.class);
                     if (cachedLogin != null) {
-                        System.out.println("Token recuperado do cache para usuário: " + cachedLogin.getLogin());
+                        System.out.println("Token recuperado do cache para usuario: " + cachedLogin.getLogin());
                         return true;
                     }
                 }
@@ -51,13 +51,13 @@ public class AuthInterceptor implements HandlerInterceptor {
                             .getBody();
 
                     String usuario = claims.getSubject();
-                    System.out.println("Token válido para usuário: " + usuario);
+                    System.out.println("Token valido para usuario: " + usuario);
 
-                    // Salva os dados do usuário no cache
+                    // Salva os dados do usuario no cache
                     if (cache != null) {
                         Login login = new Login(usuario);
                         cache.put(token, login);
-                        System.out.println("Usuário armazenado no cache: " + usuario);
+                        System.out.println("Usuario armazenado no cache: " + usuario);
                     }
 
                     return true; // Continua a requisição

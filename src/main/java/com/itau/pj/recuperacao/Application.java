@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages = "com.itau.pj.recuperacao")
-@EntityScan(basePackages = "com.itau.pj.recuperacao.entrypoints.entities")
-@EnableJpaRepositories(basePackages = "com.itau.pj.recuperacao.entrypoints.repositories")
+@EntityScan(basePackages = "com.itau.pj.recuperacao.domain.model")
+@EnableJpaRepositories(basePackages = "com.itau.pj.recuperacao.infraestrutura.adapters.repository")
 
 public class Application {
 

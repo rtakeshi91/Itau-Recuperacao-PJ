@@ -1,11 +1,10 @@
 package com.itau.pj.recuperacao.cobranca.web;
 
-import com.itau.pj.recuperacao.adapters.web.impl.CobrancaControllerImpl;
-import com.itau.pj.recuperacao.domain.cobranca.dto.input.CobrancaInputDTO;
-import com.itau.pj.recuperacao.domain.cobranca.dto.output.CobrancaOutputDTO;
-import com.itau.pj.recuperacao.domain.cobranca.service.CobrancaService;
-import com.itau.pj.recuperacao.entrypoints.entities.Cobranca;
-import com.itau.pj.recuperacao.entrypoints.repositories.CobrancaRepository;
+import com.itau.pj.recuperacao.domain.model.Cobranca;
+import com.itau.pj.recuperacao.infraestrutura.adapters.repository.CobrancaRepository;
+import com.itau.pj.recuperacao.infraestrutura.controllers.impl.CobrancaControllerImpl;
+import com.itau.pj.recuperacao.infraestrutura.dto.out.CobrancaOutputDTO;
+import com.itau.pj.recuperacao.infraestrutura.services.CobrancaService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,12 +13,12 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)

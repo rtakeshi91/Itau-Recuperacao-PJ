@@ -1,8 +1,8 @@
 package com.itau.pj.recuperacao.cobranca.web;
 
-import com.itau.pj.recuperacao.adapters.web.impl.LoginControllerImpl;
-import com.itau.pj.recuperacao.domain.autenticacao.dto.input.LoginRequestDTO;
-import com.itau.pj.recuperacao.domain.renegociacao.service.LoginService;
+import com.itau.pj.recuperacao.infraestrutura.controllers.impl.LoginControllerImpl;
+import com.itau.pj.recuperacao.infraestrutura.dto.in.LoginRequestDTO;
+import com.itau.pj.recuperacao.infraestrutura.services.LoginService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -11,7 +11,8 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.ResponseEntity;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)

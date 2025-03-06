@@ -1,5 +1,6 @@
 package com.itau.pj.recuperacao.config;
 
+import com.itau.pj.recuperacao.config.interceptor.JwtAuthenticationFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
